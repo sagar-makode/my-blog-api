@@ -6,7 +6,8 @@ const blogSchema = Schema({
     content: String, 
     author: String,
     createdAt:Date,
-    tag: String
+    tag: String,
+    description:String
 }, { versionKey: false });
 
 const loginSchema = Schema({  
