@@ -17,9 +17,9 @@ const JWT_KEY = process.env.JWT_KEY
 router.post('/createblog',verifyJWT, async (req, res, next) => {
   try {
     
-    const {title,content,createdAt,tag,description } = req.body;
+    const {title,content,createdAt,tag,description,slug } = req.body;
     
-    let adduser = await createblogservice.insertData({ title,content,createdAt,tag,description });
+    let adduser = await createblogservice.insertData({ title,content,createdAt,tag,description,slug });
     if (adduser) {
       res
         .status(200)

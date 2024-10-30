@@ -3,6 +3,7 @@ const mongoose = require('mongoose')
 
 const blogSchema = Schema({  
     title: String,
+    slug:String,
     content: String, 
     author: String,
     createdAt:Date,
